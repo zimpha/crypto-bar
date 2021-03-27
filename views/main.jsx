@@ -319,7 +319,7 @@ export default class Main extends React.Component {
             <div className="price">{x.priceData.prefix}{formatCurrency(x.priceData.price, {minFraction:2, maxFraction: 8})}&nbsp;
             {x.priceData.volume24h==0 ? null : priceDirection(x.priceData.flag)}</div>
             <div className="volume">
-            {x.priceData.volume24h==0?'no volume data':`V:${formatCurrency(x.priceData.volume24h)}`}</div>
+            {x.priceData.volume24h==0?'no volume data':`Vol: ${x.priceData.prefix}${formatCurrency(x.priceData.volume24h)}`}</div>
             {this.state.selectedBox === x.priceData.from + x.priceData.to + x.priceData.exchange ?
             <div className={"tick"}><i className="fas fa-check"/></div>:null}
           </div>)
