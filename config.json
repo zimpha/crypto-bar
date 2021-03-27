@@ -2,15 +2,18 @@
   "tickers": [
     {
       "label": "BELT",
-      "symbol": "BELT"
+      "symbol": "BELT",
+      "image": "beltTemplate.png"
     },
     {
       "label": "AUTO",
-      "symbol": "AUTO"
+      "symbol": "AUTO",
+      "image": "autoTemplate.png"
     },
     {
       "label": "CFX",
-      "symbol": "CFX"
+      "symbol": "CFX",
+      "image": "cfxTemplate.png"
     },
     {
       "label": "BTC",
@@ -45,13 +48,11 @@
       "label": "USD"
     }
   ],
-  "exchanges": [
-    "CoinGecko"
-  ],
+  "exchanges": ["CoinGecko", "OKEX", "Coinbase"],
   "defaultPreferences": {
     "currencies": [
       {
-        "exchange": "CoinGecko",
+        "exchange": "Coinbase",
         "from": "BTC",
         "to": "USD",
         "default": true
@@ -63,7 +64,7 @@
         "default": false
       },
       {
-        "exchange": "CoinGecko",
+        "exchange": "OKEX",
         "from": "CFX",
         "to": "USD",
         "default": false
@@ -84,7 +85,14 @@
     "toCurrency": {
       "symbol": "USD",
       "prefix": "$"
-    }
+    },
+    "proxy": {
+      "enable": false,
+      "protocol": "http",
+      "server": "localhost",
+      "port": 7890
+    },
+    "refreshInterval": 30000
   },
   "sources": {
     "OKEX": {
@@ -116,10 +124,7 @@
     },
     "Coinbase": {
       "BTC": {
-        "symbol": "BTC"
-      },
-      "ETH": {
-        "symbol": "ETH"
+        "symbol": "BTC-USD"
       }
     },
     "CoinGecko": {
@@ -139,11 +144,5 @@
         "symbol": "belt"
       }
     }
-  },
-  "proxy": {
-    "enable": false,
-    "protocol": "http",
-    "server": "localhost",
-    "port": 7890
   }
 }

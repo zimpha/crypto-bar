@@ -1,4 +1,4 @@
-import { app, globalShortcut, BrowserWindow, Menu, protocol, ipcMain, Tray, powerMonitor } from 'electron'
+import { app, globalShortcut, BrowserWindow, nativeImage, Tray, powerMonitor } from 'electron'
 import log from 'electron-log'
 import { autoUpdater } from "electron-updater"
 import path from 'path'
