@@ -6,6 +6,10 @@
       "image": "beltTemplate.png"
     },
     {
+      "label": "EPS",
+      "symbol": "EPS"
+    },
+    {
       "label": "AUTO",
       "symbol": "AUTO",
       "image": "autoTemplate.png"
@@ -142,6 +146,9 @@
       },
       "BELT": {
         "symbol": "belt"
+      },
+      "EPS": {
+        "symbol": "ellipsis"
       }
     }
   }
