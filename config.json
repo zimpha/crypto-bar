@@ -52,7 +52,7 @@
       "label": "USD"
     }
   ],
-  "exchanges": ["CoinGecko", "OKEX", "Coinbase"],
+  "exchanges": ["CoinGecko", "OKEX", "Coinbase", "Binance", "Huobi"],
   "defaultPreferences": {
     "currencies": [
       {
@@ -68,20 +68,8 @@
         "default": false
       },
       {
-        "exchange": "OKEX",
+        "exchange": "Binance",
         "from": "CFX",
-        "to": "USD",
-        "default": false
-      },
-      {
-        "exchange": "CoinGecko",
-        "from": "AUTO",
-        "to": "USD",
-        "default": false
-      },
-      {
-        "exchange": "CoinGecko",
-        "from": "BELT",
         "to": "USD",
         "default": false
       }
@@ -93,10 +81,10 @@
     "proxy": {
       "enable": false,
       "protocol": "http",
-      "server": "localhost",
-      "port": 7890
+      "server": "127.0.0.1",
+      "port": 1087
     },
-    "refreshInterval": 30000
+    "refreshInterval": 10000
   },
   "sources": {
     "OKEX": {
@@ -124,6 +112,9 @@
       },
       "ETH": {
         "symbol": "ETHUSDT"
+      },
+      "CFX": {
+        "symbol": "CFXUSDT"
       }
     },
     "Coinbase": {

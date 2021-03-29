@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600");
 
 .myarrow {
-position: relative;
-padding: 12px 0;
+  position: relative;
+  padding: 12px 0;
 }
 
 html,
 body {
-margin: 0 auto;
-overflow: hidden!important;
-user-select: none;
-cursor:default!important;
+  margin: 0 auto;
+  overflow: hidden !important;
+  user-select: none;
+  cursor: default !important;
 }
 
 /**
@@ -19,313 +19,309 @@ Set box-sizing to border-box for all elements by default. This makes it
 easier to ensure widths when adding padding and borders.
 */
 html {
-box-sizing: border-box;
-font-family: 'Open Sans', sans-serif;
--webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
-*, *::before, *::after {
-box-sizing: inherit;
-}
-
-h1{
-font-weight: 300;
-font-size:14px;
-color: #67737A;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-h2{
-font-weight: 100;
-font-size: 12px;
-color: #67737A;
+h1 {
+  font-weight: 300;
+  font-size: 14px;
+  color: #67737a;
 }
 
-a{
-color: #67737A;
-text-decoration: none;
+h2 {
+  font-weight: 100;
+  font-size: 12px;
+  color: #67737a;
 }
 
-a:hover{
-color:#675BC0;
+a {
+  color: #67737a;
+  text-decoration: none;
 }
 
-.currency{
-color: #67737A;
-margin-top: 14px;
-font-size: 16px;
-font-weight: 600;
-text-align: center;
+a:hover {
+  color: #675bc0;
 }
 
-.price{
-color: #67737A;
-font-size: 18px;
-font-weight: 300;
-text-align: center;
+.currency {
+  color: #67737a;
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
 }
 
-.volume{
-color: #C0C9CF;
-font-size: 11px;
-font-weight: 300;
-text-align: center;
+.price {
+  color: #67737a;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
 }
 
-.settings{
-float: right;
+.volume {
+  color: #c0c9cf;
+  font-size: 11px;
+  font-weight: 300;
+  text-align: center;
 }
 
-.subpage-back{
-    float: left;
+.settings {
+  float: right;
 }
 
-.Select{
-    font-size: 11px;
-    font-family: 'Open Sans', sans-serif;
-    border-color: white!important;
+.subpage-back {
+  float: left;
+}
+
+.Select {
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  border-color: white !important;
 }
 
 .Select-control {
-    border-color: white!important;
-    border: 1px solid white!important;
+  border-color: white !important;
+  border: 1px solid white !important;
 }
 
-
-.Select-value{
-    color:white!important;
+.Select-value {
+  color: white !important;
 }
 
 .open-top .Select-menu-outer {
-    top: auto;
-    bottom: 100%;
-  }
-
-.row{
-display: flex;
-flex-wrap: wrap;
-margin: 10px;
+  top: auto;
+  bottom: 100%;
 }
 
-.submenuRow{
-    margin:8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 
-.exchange{
-    color: #C0C9CF;
-    font-weight: 300;
-    font-size: 14px;
+.submenuRow {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.box{
-margin: 5px;
-width: 150px;
-height: 100px;
-background: #FFFFFF;
-border: 1px solid #F3F4F4;
-border-radius: 4px;
+.exchange {
+  color: #c0c9cf;
+  font-weight: 300;
+  font-size: 14px;
 }
 
-.box:hover{
-    background: #f3f4f4;
-    border: 1px solid rgb(238, 238, 238);
+.box {
+  margin: 5px;
+  width: 150px;
+  height: 100px;
+  background: #ffffff;
+  border: 1px solid #f3f4f4;
+  border-radius: 4px;
 }
 
-.tick{
-    font-size: 8px;
-    float: right;
-    margin-right:8px;
-    color: #7ED321;
+.box:hover {
+  background: #f3f4f4;
+  border: 1px solid rgb(238, 238, 238);
 }
 
-.submenu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 300px;
+.tick {
+  font-size: 8px;
+  float: right;
+  margin-right: 8px;
+  color: #7ed321;
 }
 
-
-.submenu-item{
-margin:4px 4px 8px 4px;
-border-bottom: 2px solid #fafafa;
-color:#67737A;
-font-weight: 300;
+.submenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300px;
 }
 
-.submenu-item:hover{
-    border-bottom: 2px solid #675BC0;
+.submenu-item {
+  margin: 4px 4px 8px 4px;
+  border-bottom: 2px solid #fafafa;
+  color: #67737a;
+  font-weight: 300;
 }
 
-.submenu-subtitle{
-    margin:10px 20px 10px 8px;
-    padding-bottom: 3px;
-    text-align: center;
-    font-size: 12px;
-    color:#92A0AA;
-    font-weight: 300;
+.submenu-item:hover {
+  border-bottom: 2px solid #675bc0;
 }
 
-.submenu-selected{
-    border-bottom: 2px solid #675BC0;
+.submenu-subtitle {
+  margin: 10px 20px 10px 8px;
+  padding-bottom: 3px;
+  text-align: center;
+  font-size: 12px;
+  color: #92a0aa;
+  font-weight: 300;
+}
+
+.submenu-selected {
+  border-bottom: 2px solid #675bc0;
 }
 
 .button {
-    background-color: #c6ced4;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 3px 10px 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
+  background-color: #c6ced4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 3px 10px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
 }
 
-.button:hover{
-    background-color: #675BC0;
+.button:hover {
+  background-color: #675bc0;
 }
 
-.button-inline{
-    margin: 0 auto;
-    display: inline-block;
-    overflow: hidden;
+.button-inline {
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.title{
-margin: 10px 15px 0px 15px;
+.title {
+  margin: 10px 15px 0px 15px;
 }
 
-.empty-list{
-    font-size: 14px;
-    text-align: center;
-    margin:15px 0 15px 0;
-    color:silver;
-
+.empty-list {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0 15px 0;
+  color: silver;
 }
 
-.currencies-list{
-    overflow: hidden;
+.currencies-list {
+  overflow: hidden;
 }
 
-
-.currencies-item{
-    color: #92A0AA!important;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    padding:11px 30px 11px 30px;
-    border-top: 1px solid #F3F4F4;
-
+.currencies-item {
+  color: #92a0aa !important;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  padding: 11px 30px 11px 30px;
+  border-top: 1px solid #f3f4f4;
 }
 
-.currencies-item:hover{
-    background: white;
+.currencies-item:hover {
+  background: white;
 }
 
-.add-pair{
-    text-align: center;
-    color:#C6CED4
+.add-pair {
+  text-align: center;
+  color: #c6ced4;
 }
 
-.add-pair:hover{
-    color:#675BC0
+.add-pair:hover {
+  color: #675bc0;
 }
 
-.erase{
-    color: transparent;
-    float:right;
+.erase {
+  color: transparent;
+  float: right;
 }
 
-.currencies-item:hover .erase { 
-    color:#D0021B;
+.currencies-item:hover .erase {
+  color: #d0021b;
 }
 
-.inside{
-border-top: 1px solid #F3F4F4;
-border-bottom: 1px solid #F3F4F4;
-background-color: #FAFAFA;
-width: 100%;
-height: 350px;
-margin: 0!important;
+.inside {
+  border-top: 1px solid #f3f4f4;
+  border-bottom: 1px solid #f3f4f4;
+  background-color: #fafafa;
+  width: 100%;
+  height: 350px;
+  margin: 0 !important;
 }
 
-.up{
-font-size: 12px;
-color: #7ED321;
-vertical-align: middle;
+.up {
+  font-size: 12px;
+  color: #7ed321;
+  vertical-align: middle;
 }
 
-.down{
-    font-size: 12px;
-    color: #cb2c31; 
-    vertical-align: middle;
+.down {
+  font-size: 12px;
+  color: #cb2c31;
+  vertical-align: middle;
 }
 
-.bell{
-    color: #adb5ba;
-    font-size:14px;
+.bell {
+  color: #adb5ba;
+  font-size: 14px;
 }
 
-hr{
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #F3F4F4;
-    margin: auto;
-    padding: 0; 
-    width:100%;
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #f3f4f4;
+  margin: auto;
+  padding: 0;
+  width: 100%;
 }
 
-.bell:hover{
-    color:#675BC0;
+.bell:hover {
+  color: #675bc0;
 }
 
-.version{
-color:#92A0AA;
+.version {
+  color: #92a0aa;
 }
 
 .myarrow:before {
-content: "";
-height: 0;
-width: 0;
-border-width: 0 8px 12px 8px;
-border-style: solid;
-border-color: transparent transparent white transparent;
-position: absolute;
-top: 0px;
-left: 50%;
-transform: translateX(-50%);
+  content: "";
+  height: 0;
+  width: 0;
+  border-width: 0 8px 12px 8px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .page {
-background: white;
-display: flex;
-flex-direction: column;
-width: 340px;
-height: 430px;
-margin: 0 auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 430px;
+  margin: 0 auto;
 }
-
 
 .darwin.page {
-border-radius: 5px;
-/* box-shadow: 0 5px 24px rgba(0, 0, 0, 0.7); */
-overflow: hidden;
+  border-radius: 5px;
+  /* box-shadow: 0 5px 24px rgba(0, 0, 0, 0.7); */
+  overflow: hidden;
 }
 
-.container{
-margin:0px 0px 0px 0px;
+.container {
+  margin: 0px 0px 0px 0px;
 }
 
-.header{
-display: inline;
-text-align: center;
+.header {
+  display: inline;
+  text-align: center;
 }
 
-.footer{
-display: inline;
-text-align: center;
+.footer {
+  display: inline;
+  text-align: center;
 }

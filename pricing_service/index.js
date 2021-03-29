@@ -167,18 +167,33 @@ async function makeBatchCoinGeckoRequest(symbols, proxy) {
 
 // HTTP API is used as the primary source of prices
 const HTTP = async (data, proxy) => {
-  const coinbaseData = data.filter((x) => x.exchange === "Coinbase");
-  const coingeckoData = data.filter((x) => x.exchange !== "Coinbase");
+  const otherData = data.filter((x) => x.exchange !== "CoinGecko");
+  const coingeckoData = data.filter((x) => x.exchange === "CoinGecko");
   const coingeckoSymbols = coingeckoData.map((x) => {
     return config.sources["CoinGecko"][x.from].symbol;
   });
 
-  let requests = coinbaseData.map(async (x) => {
+  let requests = otherData.map(async (x) => {
     const exchange = x.exchange;
-    const res = await makeCoinbaseRequest(
-      config.sources["Coinbase"][x.from].symbol,
-      proxy
-    );
+    let res = {};
+    if (exchange === "Coinbase" && config.sources["Coinbase"][x.from]) {
+      res = await makeCoinbaseRequest(
+        config.sources["Coinbase"][x.from].symbol,
+        proxy
+      );
+    } else if (exchange === "Huobi" && config.sources["Huobi"][x.from]) {
+      res = await makeHuobiRequest(
+        config.sources["Huobi"][x.from].symbol,
+        proxy
+      );
+    } else if (exchange === "Binance" && config.sources["Binance"][x.from]) {
+      res = await makeBinanceRequest(
+        config.sources["Binance"][x.from].symbol,
+        proxy
+      );
+    } else if (exchange === "OKEX" && config.sources["OKEX"][x.from]) {
+      res = await makeOKEXRequest(config.sources["OKEX"][x.from].symbol, proxy);
+    }
     let uniqueId = x.from + x.exchange;
     let from = x.from;
     return {
@@ -189,13 +204,14 @@ const HTTP = async (data, proxy) => {
     };
   });
 
+  // coingecko supports batch request
   requests.push(makeBatchCoinGeckoRequest(coingeckoSymbols, proxy));
-  const responses = await axios.all(requests);
 
-  const coinbaseResponses = responses.slice(0, responses.length - 1);
+  const responses = await axios.all(requests);
+  const otherResponses = responses.slice(0, responses.length - 1);
   const coingeckoResponses = responses[responses.length - 1];
 
-  let result = coinbaseResponses.reduce((accum, res) => {
+  let result = otherResponses.reduce((accum, res) => {
     let prefix = "$";
     accum[res.uniqueId] = {
       exchange: res.exchange,
